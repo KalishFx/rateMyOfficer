@@ -12,6 +12,8 @@ import { HeaderComponent } from './header/header.component';
 import { PoliceDetailComponent } from './police-detail/police-detail.component';
 import { ListComponent } from './list/list.component';
 
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +28,7 @@ import { ListComponent } from './list/list.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

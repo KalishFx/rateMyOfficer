@@ -1,7 +1,12 @@
 <!--police details-box-->
-<div class="details-box-wrap">
-    <div class="details-box">
+<div *ngIf="selectedPolice">
 
+    <h2>{{selectedPolice.name | lowercase}} Details</h2>
+    <div><span>id:</span>{{selectedPolice.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="selectedPolice.name" placeholder="name">
+      </label>
     </div>
-  </div>
-  <!--end of details-box-->
+  
+  </div> <!--end of details-box-->

@@ -1,3 +1,9 @@
-<p>
-  police works!
-</p>
+<h2> Police </h2>
+<ul class="polices">
+  <li *ngFor="let police of polices"
+  [class.selected]="police === selectedPolice"
+  (click)="onSelect(police)">
+    <span class="badge">{{police.id}}</span> {{police.name}}
+  </li>
+</ul>
+<app-police-detail [police]="selectedPolice"></app-police-detail>
