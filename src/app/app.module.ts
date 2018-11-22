@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PoliceComponent } from './police/police.component';
 import { PoliceDepartmentComponent } from './police-department/police-department.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { MessagesComponent } from './messages/messages.component';
 import { HeaderComponent } from './header/header.component';
@@ -19,7 +18,6 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
     AppComponent,
     PoliceComponent,
     PoliceDepartmentComponent,
-    DashboardComponent,
     SearchbarComponent,
     MessagesComponent,
     HeaderComponent,
