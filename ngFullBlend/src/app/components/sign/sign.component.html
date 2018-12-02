@@ -1,0 +1,84 @@
+<!-- WELCOME AREA + SEARCH -->
+<section id="welcome">
+
+  <div class="form">
+
+    <ul class="tab-group">
+      <li class="tab active"><a href="#signup">Sign Up</a></li>
+      <li class="tab"><a href="#login">Log In</a></li>
+    </ul> <!-- close tab group-->
+
+    <div class="tab-content">
+      <div id="signup">
+        <h1>Sign Up for Free</h1>
+
+        <form (submit)="onRegisterSubmit()">
+
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                Name<span class="req">*</span>
+              </label>
+              <input type="text" [(ngModel)]="name" name="name" required autocomplete="off" />
+            </div>
+
+            <div class="field-wrap">
+              <label>
+                Username<span class="req">*</span>
+              </label>
+              <input type="text" [(ngModel)]="username" name="username" required autocomplete="off" />
+            </div>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email" [(ngModel)]="email" name="email" required autocomplete="off" />
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Set A Password<span class="req">*</span>
+            </label>
+            <input type="password" [(ngModel)]="password" name="password" required autocomplete="off" />
+          </div>
+
+          <button type="submit" class="button button-block">Sign Up</button>
+
+        </form>
+
+      </div> <!-- close sign up -->
+
+      <div id="login">
+        <h1>Welcome Back!</h1>
+
+        <form (submit)="onLoginSubmit()">
+
+          <div class="field-wrap">
+            <label>
+              Username<span class="req">*</span>
+            </label>
+            <input type="text" [(ngModel)]="username" name="username" required autocomplete="off" />
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password" [(ngModel)]="password" name="password" required autocomplete="off" />
+          </div>
+
+          <!--<p class="forgot"><a href="#">Forgot Password?</a></p>-->
+
+          <button type="submit" class="button button-block">Log In</button>
+
+        </form> <!-- close form -->
+
+      </div> <!-- close login -->
+
+    </div><!-- tab-content -->
+
+  </div> <!-- close form-->
+
+</section> <!-- close section -->

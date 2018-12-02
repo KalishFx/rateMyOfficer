@@ -1,0 +1,24 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: $bg-color;
+  margin: 0;
+  min-width: 300px;
+  min-height: 320px;
+}
+
+a {
+  text-decoration: none;
+
+  &:active {
+    color: $primary-color;
+  }
+}
