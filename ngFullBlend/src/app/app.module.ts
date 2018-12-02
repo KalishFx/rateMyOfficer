@@ -15,6 +15,9 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
 import { AuthGuard } from './guards/auth.guard';
 import { ValidateService } from './services/validate.service';
 import { AuthService } from './services/auth.service';
+import { PoliceComponent } from './components/police/police.component';
+import { PoliceDetailComponent } from './components/police-detail/police-detail.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { AuthService } from './services/auth.service';
     SignComponent,
     HomeComponent,
     Nf404Component,
-    ProfileComponent
+    ProfileComponent,
+    PoliceComponent,
+    PoliceDetailComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
