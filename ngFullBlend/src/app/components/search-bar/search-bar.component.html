@@ -1,3 +1,13 @@
-<p>
-  search-bar works!
-</p>
+<div id="search">
+    <input id="search-input" placeholder="Search for an officer">
+    <button id="search-btn" type="button">Search</button>
+    
+    <!--Search results-->
+    <ul class="search-result">
+      <li *ngFor="let result of results$ | async" >
+        <a routerLink="/">
+          {{result.name}}
+        </a>
+      </li>
+    </ul>
+</div>

@@ -24,7 +24,9 @@ mongoose.connection.on('error', (err) => {
 // Create Server
 const app = express();
 
+// Routes
 const users = require('./routes/users');
+const polices = require('./routes/polices');
 
 // Port Number
 const port = 3000; // When deploying change to process.env.PORT || 8080; heroku doah
@@ -48,6 +50,7 @@ app.use(bodyParser.json());
 
 // Located in routes
 app.use('/users', users);
+app.use('/polices', polices);
 
 // Index Route
 app.get('/', (req, res) => {
