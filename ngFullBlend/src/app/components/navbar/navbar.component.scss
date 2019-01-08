@@ -1,0 +1,57 @@
+//NAV TOP
+.nav {
+  height: 50px;
+  width: 100%;
+  //background-color: $primary-color;
+  position: relative;
+  //border-bottom: 3px $secondary-color solid;
+  background: linear-gradient(90deg, #FFFCFF, #fff);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav>.nav-header {
+  display: inline;
+}
+
+.nav>.nav-header>.nav-title {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 800;
+  color: $primary-color;
+  padding: 10px 10px 10px 20px;
+}
+
+#logo-highlight {
+  color: $secondary-color;
+}
+
+.nav>.nav-btn {
+  display: none;
+}
+
+.nav>.nav-links {
+  display: inline;
+  //float: right;
+  margin-right: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+
+}
+
+.nav>.nav-links>a {
+  display: inline-block;
+  padding: 13px 10px 5px 10px;
+  text-decoration: none;
+  color: $primary-color;
+}
+
+.nav>.nav-links>a:hover {
+  //background-color: rgba(0, 0, 0, 0.3);
+  color: $secondary-color;
+}
+
+.nav>#nav-check {
+  display: none;
+}

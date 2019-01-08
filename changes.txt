@@ -1,0 +1,18 @@
+changed 
+    routers.post to routers.get
+in routes/polices.js
+
+
+changed
+    Police.find(query, callback); to Police.findOne(query, callback);
+in models/police.js
+
+
+changed
+    add const in front of police schema export
+in models/police.js
+
+
+Updated
+    versions and scripts
+in package.json

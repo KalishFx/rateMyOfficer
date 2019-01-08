@@ -1,0 +1,22 @@
+<!-- NAVBAR -->
+<div class="nav">
+  <!-- LOGO -->
+  <div class="nav-header">
+    <div class="nav-title">
+      <a [routerLink]="['/home']">Coop<span id="logo-highlight"> Rate </span></a>
+    </div>
+  </div>
+
+  <!-- BURGER -->
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span> <span></span> <span></span>
+    </label>
+  </div>
+
+  <!-- SIGN IN / SIGN UP -->
+  <div class="nav-links">
+    <a *ngIf="!authService.loggedIn()" [routerLink]="['/sign']">Sign In/Sign Up</a>
+    <a *ngIf="authService.loggedIn()" [routerLink]="['/sign']" (click)="onLogOutClick()">Logout</a>
+  </div>
+</div>
