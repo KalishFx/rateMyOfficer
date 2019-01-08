@@ -23,6 +23,7 @@ const UserSchema = mongoose.Schema({
 });
 
 
+
 // Export the User schema
 const User = module.exports = mongoose.model('User', UserSchema);
 
@@ -42,10 +43,12 @@ module.exports.getUserByUsername = function (username, callback) {
 
 // Here we are adding a new user but storing their password in hash format - bcrypts 10 round ..salt generation
 module.exports.addUser = function (newUser, callback) {
+
   bcrypt.genSalt(10, (err, salt) => {
     bcrypt.hash(newUser.password, salt, (err, hash) => {
       if (err) throw err;
       newUser.password = hash;
+      //console.log(newUser.name);
       newUser.save(callback);
     });
   });

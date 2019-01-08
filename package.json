@@ -4,18 +4,20 @@
   "description": "MEAN stack",
   "main": "app.js",
   "scripts": {
+    "server": "nodemon",
+    "client": "cd ngFullBlend && ng serve",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app"
+    "start": "concurrently \"npm run server\" \"npm run client\"  "
   },
   "dependencies": {
-    "bcryptjs": "*",
-    "body-parser": "*",
-    "cors": "*",
-    "express": "*",
-    "jsonwebtoken": "*",
+    "bcryptjs": "~2.4.3",
+    "body-parser": "~1.18.3",
+    "cors": "~2.8.5",
+    "express": "~4.16.4",
+    "jsonwebtoken": "~8.4.0",
     "mongoose": "^5.3.15",
-    "passport": "*",
-    "passport-jwt": "*"
+    "passport": "~0.4.0",
+    "passport-jwt": "~4.0.0"
   },
   "author": "Kalish",
   "license": "ISC"

@@ -6,6 +6,7 @@ const config = require('../config/database');
 const User = require('../models/user');
 
 
+
 // Register user - create new User object then push that to add user
 router.post('/register', (req, res, next) => {
   let newUser = new User({
@@ -14,7 +15,7 @@ router.post('/register', (req, res, next) => {
     username: req.body.username,
     password: req.body.password
   });
-  
+
   User.addUser(newUser, (err, user) => {
     if (err) {
       res.json({
@@ -58,7 +59,7 @@ router.post('/authenticate', (req, res, next) => {
           user: {
             id: user._id,
             name: user.name,
-            username: user.unsername,
+            username: user.username,
             email: user.email
           }
         });
@@ -70,6 +71,7 @@ router.post('/authenticate', (req, res, next) => {
       }
     });
   });
+
 });
 
 // User profile accessible only if logged in
